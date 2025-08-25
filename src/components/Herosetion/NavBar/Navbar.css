@@ -1,0 +1,208 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: rgb(255, 255, 255);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            border-bottom: 2px solid black;
+            z-index: 10000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+
+        }
+
+        .nav-logo {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+        }
+
+        .nav-link {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #2f2f2fff;
+        }
+
+        .nav-link {
+
+            font-size: 1em;
+            text-decoration: none;
+            position: relative;
+            color: black;
+            display: flex;
+            align-items: center;
+            padding-bottom: 5px;
+
+            img {
+                width: 25px;
+                margin-right: 10px;
+            }
+
+            &[href="#about"] {
+                img {
+
+                    margin-right: 5px;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                height: 2px;
+                background: #ff6600;
+                transition: width 0.4s ease;
+
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            color: black;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .nav-item {
+                margin-left: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.98);
+                width: 100%;
+                height: calc(100vh - 70px);
+                text-align: center;
+                transition: 0.4s ease-in-out;
+                padding: 2rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 1.5rem 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+                justify-content: center;
+            }
+
+            .hamburger {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .nav-logo {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .navbar {
+                padding: 0.8rem;
+            }
+
+            .nav-logo {
+                font-size: 1.5rem;
+            }
+
+            .nav-menu {
+                padding: 1.5rem;
+                top: 60px;
+                height: calc(100vh - 60px);
+            }
+
+            .nav-link {
+                font-size: 1.1rem;
+            }
+
+            .nav-item {
+                margin: 1.2rem 0;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .navbar {
+                padding: 0.6rem;
+            }
+
+            .nav-logo {
+                font-size: 1.3rem;
+            }
+
+            .nav-menu {
+                padding: 1rem;
+            }
+        }
