@@ -16,7 +16,7 @@ export default function CardSection() {
     },
     {
         title: "Time-based Projects",
-        desc: "A collection of projects(Small projects) I made along the way while I was learning about how browsers handle time.",
+        desc: "A collection of projects (Small projects) I made along the way while I was learning about how browsers handle time.",
         link: "https://github.com/dragon-slayer99/Time-Based-Projects"
     },
     {

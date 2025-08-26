@@ -8,6 +8,9 @@ ul {
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+    opacity: 0;
+    animation: fadeUp  0.8s ease forwards;
+    animation-delay: 0.8s;
 }
 
 .example-2 .icon-content {
@@ -120,4 +123,16 @@ ul {
             #000000 100%
             /* black */
         );
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -46,7 +46,7 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+                            <a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                                 <img src="about.svg" alt="" /> About
                             </a>
                         </li>
