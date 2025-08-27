@@ -1,0 +1,312 @@
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px;
+    padding-top: 0;
+    align-items: center;
+}
+
+.education-container h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin: 0px 0px 20px 0px;
+    max-width: 90vw;
+    text-align: center;
+}
+
+/* Card style */
+.education-card {
+    border: 2px solid black;
+    /* border-radius: 12px; */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 8px 8px #d4d4d4;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+
+    /* Animation */
+    animation: fadeUp both;
+    animation-timeline: view(10% auto);
+    animation-range: entry 0% cover 40%;
+}
+
+/* Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* allow wrapping if needed */
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    /* allow wrapping inside title */
+}
+
+/* Dynamic heading */
+.title h2 {
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+    font-weight: 600;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    /* wrap long words */
+}
+
+/* Badge */
+.status-badge {
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.status-badge.completed {
+    background: #e6f7ed;
+    color: #059669;
+}
+
+.status-badge.ongoing {
+    background: #fff7e6;
+    color: #d97706;
+}
+
+/* Row style */
+.card-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: #555;
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    /* flex-wrap: wrap; */
+    /* allow row to break if needed */
+}
+
+.card-row p {
+    overflow-wrap: break-word;
+    text-align: start;
+}
+
+/* Icons */
+.card-row svg,
+.title svg {
+    flex-shrink: 0;
+    width: clamp(18px, 2.5vw, 24px);
+    height: clamp(18px, 2.5vw, 24px);
+}
+
+/* Performance row */
+.performance {
+    background: #fffaf0;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #d97706;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    overflow-wrap: break-word;
+}
+
+
+
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        filter: brightness(2) contrast(4) blur(3px) saturate(0);
+        opacity: 0;
+        scale: 0.90;
+        translate: 0 4rem;
+    }
+
+    to {
+        filter: none;
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
+}
+
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+
+    .cardContainer h1 {
+        font-size: 3em;
+        letter-spacing: 3px;
+        margin: 20px 0px 20px 0px;
+        max-width: 90vw;
+
+    }
+}
+
+@media (min-width: 1020) {
+
+
+    .education-container h1 {
+        font-size: 2em;
+
+    }
+}
+
+@media (min-width: 1364) {
+
+
+    .education-container h1 {
+        font-size: 2em;
+
+    }
+}
+
+
+/** CSS for experience card*/
+
+.experience-wrapper {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.experience-card {
+    background: #fff;
+    /* border-radius: 16px; */
+    padding: 24px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 8px 8px 0px #d4d4d4;
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    animation: fadeUp both;
+    animation-timeline: view(10% auto);
+    animation-range: entry 0% cover 40%;
+}
+
+/* Header */
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.experience-header h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+}
+
+/* Status chip */
+.status-chip {
+    background: #fff7e6;
+    color: #d97706;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* Meta rows */
+.experience-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.experience-meta svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Description */
+.experience-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+}
+
+/* Highlight block */
+.experience-highlight {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: #fffaf0;
+    border-left: 4px solid #f59e0b;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #d97706;
+    line-height: 1.5;
+}
+
+.experience-highlight svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .experience-header h2 {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+
+    .experience-description {
+        font-size: 0.9rem;
+    }
+
+    .experience-meta {
+        font-size: 0.9rem;
+    }
+
+    .experience-meta p {
+        text-align: start;
+    }
+
+    .experience-meta svg,
+    .experience-highlight svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+
+
+
+
+.duplicate {
+    height: 100vh;
+}

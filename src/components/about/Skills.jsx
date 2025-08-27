@@ -4,7 +4,7 @@ import './Skills.css'
 
 export default function Skills() {
     return (
-        <div className='main-skills-container'>
+        <section className='main-skills-container'>
             <h1>Technical Skills</h1>
             <div className="skills-container">
                 <div className="skills-card">
@@ -215,6 +215,6 @@ export default function Skills() {
             </div>
 
 
-        </div>
+        </section>
     )
 }

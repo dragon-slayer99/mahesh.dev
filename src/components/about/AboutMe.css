@@ -85,6 +85,7 @@
     flex-direction: row;
     text-align: left;
     gap: 3rem;
+    margin: 2rem 0;
   }
 
   .profile-desc {

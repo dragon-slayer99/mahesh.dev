@@ -9,12 +9,12 @@ ul {
     align-items: center;
     padding-top: 50px;
     opacity: 0;
-    animation: fadeUp  0.8s ease forwards;
+    animation: fadeUp 0.8s ease forwards;
     animation-delay: 0.8s;
 }
 
 .example-2 .icon-content {
-    margin: 0 15px;
+    margin: 0 5px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -109,20 +109,12 @@ ul {
 
 .example-2 .icon-content a[data-social="leetcode"] .filled,
 .example-2 .icon-content a[data-social="leetcode"] ~ .tooltip {
-    background: linear-gradient(135deg,
-            #FFD580 0%,
-            /* soft light yellow */
-            #FFA116 20%,
-            /* LeetCode yellow-orange */
-            #FF9800 40%,
-            /* bright orange */
-            #FF8000 60%,
-            /* deep orange */
-            #CC5500 80%,
-            /* burnt orange */
-            #000000 100%
-            /* black */
-        );
+    background: rgb(128, 204, 15)
+}
+
+.example-2 .icon-content a[data-social="Gmail"] .filled,
+.example-2 .icon-content a[data-social="Gmail"] ~ .tooltip {
+    background: crimson
 }
 
 @keyframes fadeUp {

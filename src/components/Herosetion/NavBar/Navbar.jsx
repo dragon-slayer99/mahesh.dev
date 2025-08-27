@@ -50,13 +50,13 @@ const Navbar = () => {
                                 <img src="about.svg" alt="" /> About
                             </a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a href="#" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                                 <img src="certificate.svg" alt="" /> Certifications
                             </a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
-                            <a href="#" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+                            <a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                                 <img src="contact.svg" alt="" /> Contact
                             </a>
                         </li>
