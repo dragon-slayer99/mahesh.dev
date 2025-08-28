@@ -26,10 +26,6 @@
     margin: 0 auto;
     width: 100%;
 
-    /* Animation */
-    animation: fadeUp both;
-    animation-timeline: view(10% auto);
-    animation-range: entry 0% cover 40%;
 }
 
 /* Header */
@@ -115,36 +111,7 @@
 
 
 
-/* Animation */
-@keyframes fadeUp {
-    from {
-        filter: brightness(2) contrast(4) blur(3px) saturate(0);
-        opacity: 0;
-        scale: 0.90;
-        translate: 0 4rem;
-    }
 
-    to {
-        filter: none;
-        opacity: 1;
-        scale: 1;
-        translate: 0 0;
-    }
-}
-
-
-/* Animation */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 @media screen and (max-width: 640px) {
 
@@ -197,9 +164,6 @@
     flex-direction: column;
     gap: 1.2rem;
 
-    animation: fadeUp both;
-    animation-timeline: view(10% auto);
-    animation-range: entry 0% cover 40%;
 }
 
 /* Header */
@@ -258,7 +222,7 @@
     gap: 10px;
     align-items: flex-start;
     background: #fffaf0;
-    border-left: 4px solid #f59e0b;
+    /* border-left: 4px solid #f59e0b; */
     padding: 14px 16px;
     border-radius: 10px;
     font-size: 0.95rem;

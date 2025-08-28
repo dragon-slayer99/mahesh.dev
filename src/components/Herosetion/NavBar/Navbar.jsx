@@ -1,5 +1,5 @@
 // import React from 'react'
-import './Navbar.css'
+// import './Navbar.css'
 // function Navbar() {
 
 //     return (
@@ -21,18 +21,47 @@ import './Navbar.css'
 
 // export default Navbar
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import './Navbar.css';
+import { Rocket, Mail, User } from 'lucide-react';
 
-const Navbar = () => {
+export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('');
+
+    const sections = ['projects', 'about', 'contact'];
+    // const sectionRefs = useRef({});
+
+    // sections.forEach((section) => {
+    //     sectionRefs.current[section] = React.createRef();
+    // });
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            { threshold: 0.6 } // Section is considered active when 60% visible
+        );
+
+        sections.forEach((section) => {
+            const element = document.getElementById(section);
+            if (element) observer.observe(element);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
-
             <nav className="navbar">
                 <div className="nav-container">
                     <a href="#" className="nav-logo">
@@ -41,23 +70,30 @@ const Navbar = () => {
 
                     <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                         <li className="nav-item">
-                            <a href="#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-                                <img src="projects.svg" alt="" /> Projects
+                            <a
+                                href="#projects"
+                                className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                <Rocket /> Projects
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-                                <img src="about.svg" alt="" /> About
+                            <a
+                                href="#about"
+                                className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                <User /> About
                             </a>
                         </li>
-                        {/* <li className="nav-item">
-                            <a href="#" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-                                <img src="certificate.svg" alt="" /> Certifications
-                            </a>
-                        </li> */}
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-                                <img src="contact.svg" alt="" /> Contact
+                            <a
+                                href="#contact"
+                                className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                <Mail /> Contact
                             </a>
                         </li>
                     </ul>
@@ -74,6 +110,6 @@ const Navbar = () => {
             </nav>
         </>
     );
-};
+}
 
-export default Navbar;
+

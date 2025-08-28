@@ -1,6 +1,14 @@
 import React from "react";
 import "./Education.css";
-import { Target, Rocket, BriefcaseBusiness, GraduationCap, Calendar, Building2, TrendingUp } from "lucide-react";
+import {
+    Target,
+    Rocket,
+    GraduationCap,
+    Calendar,
+    Building2,
+    TrendingUp,
+} from "lucide-react";
+import { motion } from "framer-motion";
 
 const educationData = [
     {
@@ -26,87 +34,107 @@ const educationData = [
     },
 ];
 
-
 export default function Education() {
     return (
-        <>
-            <div className="education-container">
-                <h1>Education & Experience</h1>
-                {educationData.map((edu, index) => (
-                    <div key={index} className="education-card">
-                        <div className="card-header">
-                            <div className="title">
-                                <GraduationCap size={20} />
-                                <h2>{edu.title}</h2>
-                            </div>
-                            <span
-                                className={`status-badge ${edu.status === "Completed" ? "completed" : "ongoing"
-                                    }`}
-                            >
-                                {edu.status}
-                            </span>
-                        </div>
+        <div className="education-container">
+            {/* Heading animation */}
+            <motion.h1
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                Education & Experience
+            </motion.h1>
 
-                        <div className="card-row">
-                            <Calendar size={18} />
-                            <p>{edu.period}</p>
+            {/* Education cards */}
+            {educationData.map((edu, index) => (
+                <motion.div
+                    key={index}
+                    className="education-card"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 0.8,
+                        ease: "easeOut",
+                        delay: index * 0.2, // stagger effect
+                    }}
+                    viewport={{once:true, amount: 0.8 }}
+                >
+                    <div className="card-header">
+                        <div className="title">
+                            <GraduationCap size={20} />
+                            <h2>{edu.title}</h2>
                         </div>
-
-                        <div className="card-row">
-                            <Building2 size={18} />
-                            <p>{edu.institution}</p>
-                        </div>
-
-                        <div className="card-row performance">
-                            <TrendingUp size={18} />
-                            <p>{edu.performance}</p>
-                        </div>
+                        <span
+                            className={`status-badge ${edu.status === "Completed" ? "completed" : "ongoing"
+                                }`}
+                        >
+                            {edu.status}
+                        </span>
                     </div>
-                ))}
-                <div className="experience-wrapper">
-                    <div className="experience-card">
 
-                        {/* Header */}
-                        <div className="experience-header">
-                            <h2>No Formal Work Experience Yet</h2>
-                            <span className="status-chip">Seeking Opportunities</span>
-                        </div>
+                    <div className="card-row">
+                        <Calendar size={18} />
+                        <p>{edu.period}</p>
+                    </div>
 
-                        {/* Meta info */}
-                        <div className="experience-meta">
-                            <Calendar />
-                            <p>2025 – Present</p>
-                        </div>
-                        <div className="experience-meta">
-                            <Target />
-                            <p>Focused on Skill-Building</p>
-                        </div>
+                    <div className="card-row">
+                        <Building2 size={18} />
+                        <p>{edu.institution}</p>
+                    </div>
 
-                        {/* Description */}
-                        <p className="experience-description">
-                            I am currently sharpening my skills through hands-on projects,
-                            online learning, and problem-solving on platforms like
-                            <strong> LeetCode</strong> and <strong> GitHub</strong>.
-                            I strongly believe in learning by doing and continuously challenging myself.
+                    <div className="card-row performance">
+                        <TrendingUp size={18} />
+                        <p>{edu.performance}</p>
+                    </div>
+                </motion.div>
+            ))}
+
+            {/* Experience card (long one) */}
+            <motion.div
+                className="experience-wrapper"
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.8 }}
+            >
+                <div className="experience-card">
+                    {/* Header */}
+                    <div className="experience-header">
+                        <h2>No Formal Work Experience Yet</h2>
+                        <span className="status-chip">Seeking Opportunities</span>
+                    </div>
+
+                    {/* Meta info */}
+                    <div className="experience-meta">
+                        <Calendar />
+                        <p>2025 – Present</p>
+                    </div>
+                    <div className="experience-meta">
+                        <Target />
+                        <p>Focused on Skill-Building</p>
+                    </div>
+
+                    {/* Description */}
+                    <p className="experience-description">
+                        I am currently sharpening my skills through hands-on projects,
+                        online learning, and problem-solving on platforms like
+                        <strong> LeetCode</strong> and <strong> GitHub</strong>. I strongly
+                        believe in learning by doing and continuously challenging myself.
+                    </p>
+
+                    {/* Recruiter-focused statement */}
+                    <div className="experience-highlight">
+                        <Rocket />
+                        <p>
+                            Excited to join a dynamic team where I can <strong>learn</strong>,
+                            <strong> grow</strong>, and <strong>add value from day one</strong>
+                            .
                         </p>
-
-                        {/* Recruiter-focused statement */}
-                        <div className="experience-highlight">
-                            <Rocket />
-                            <p>
-                                Excited to join a dynamic team where I can <strong>learn</strong>,
-                                <strong> grow</strong>, and <strong>add value from day one</strong>.
-                            </p>
-                        </div>
                     </div>
                 </div>
-
-            </div>
-
-        </>
-
-
-
-
+            </motion.div>
+        </div>
     );
 }

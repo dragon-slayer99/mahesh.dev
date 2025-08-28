@@ -9,6 +9,7 @@
       justify-content: space-between;
       background: #fafafa;
       transition: all 0.3s ease;
+      min-height: 350px; 
     }
 
     .card:hover {
@@ -48,6 +49,10 @@
       bottom: 0px;
       margin-top: auto;
       align-self: flex-start;
+    }
+
+    .card a svg{
+      margin-right: 5px;
     }
 
     .card a:hover {

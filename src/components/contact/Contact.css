@@ -113,3 +113,18 @@
   background: blueviolet;
   color: white;
 }
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-status:contains("✅") {
+  color: green;
+}
+
+.form-status:contains("❌") {
+  color: red;
+}

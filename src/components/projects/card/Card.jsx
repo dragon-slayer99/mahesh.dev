@@ -1,5 +1,6 @@
 import React from 'react'
 import './Card.css'
+import { Github } from 'lucide-react'
 
 function Card({ project }) {
     if (!project) {
@@ -33,6 +34,7 @@ function Card({ project }) {
                 rel="noopener noreferrer"
                 aria-label={`View ${project.title} on GitHub`}
             >
+                <Github/>
                 GitHub
             </a>
         </div>
