@@ -1,8 +1,6 @@
-
-
 import { useEffect, useRef, useState, createElement, useMemo, useCallback } from "react";
-import { gsap } from "gsap";
-import './TextType.css'
+import { motion } from "framer-motion";
+import './TextType.css';
 
 const TextType = ({
   text,
@@ -30,7 +28,6 @@ const TextType = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(!startOnVisible);
-  const cursorRef = useRef(null);
   const containerRef = useRef(null);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
@@ -65,19 +62,6 @@ const TextType = ({
   }, [startOnVisible]);
 
   useEffect(() => {
-    if (showCursor && cursorRef.current) {
-      gsap.set(cursorRef.current, { opacity: 1 });
-      gsap.to(cursorRef.current, {
-        opacity: 0,
-        duration: cursorBlinkDuration,
-        repeat: -1,
-        yoyo: true,
-        ease: "power2.inOut",
-      });
-    }
-  }, [showCursor, cursorBlinkDuration]);
-
-  useEffect(() => {
     if (!isVisible) return;
 
     let timeout;
@@ -90,9 +74,7 @@ const TextType = ({
       if (isDeleting) {
         if (displayedText === "") {
           setIsDeleting(false);
-          if (currentTextIndex === textArray.length - 1 && !loop) {
-            return;
-          }
+          if (currentTextIndex === textArray.length - 1 && !loop) return;
 
           if (onSentenceComplete) {
             onSentenceComplete(textArray[currentTextIndex], currentTextIndex);
@@ -100,7 +82,7 @@ const TextType = ({
 
           setCurrentTextIndex((prev) => (prev + 1) % textArray.length);
           setCurrentCharIndex(0);
-          timeout = setTimeout(() => { }, pauseDuration);
+          timeout = setTimeout(() => {}, pauseDuration);
         } else {
           timeout = setTimeout(() => {
             setDisplayedText((prev) => prev.slice(0, -1));
@@ -110,9 +92,7 @@ const TextType = ({
         if (currentCharIndex < processedText.length) {
           timeout = setTimeout(
             () => {
-              setDisplayedText(
-                (prev) => prev + processedText[currentCharIndex]
-              );
+              setDisplayedText((prev) => prev + processedText[currentCharIndex]);
               setCurrentCharIndex((prev) => prev + 1);
             },
             variableSpeed ? getRandomSpeed() : typingSpeed
@@ -132,7 +112,6 @@ const TextType = ({
     }
 
     return () => clearTimeout(timeout);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     currentCharIndex,
     displayedText,
@@ -168,12 +147,13 @@ const TextType = ({
       {displayedText}
     </span>,
     showCursor && (
-      <span
-        ref={cursorRef}
+      <motion.span
         className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? "text-type__cursor--hidden" : ""}`}
+        animate={{ opacity: [1, 0] }}
+        transition={{ duration: cursorBlinkDuration, repeat: Infinity, repeatType: "reverse" }}
       >
         {cursorCharacter}
-      </span>
+      </motion.span>
     )
   );
 };

@@ -9,7 +9,7 @@
       justify-content: space-between;
       background: #fafafa;
       transition: all 0.3s ease;
-      min-height: 350px; 
+      min-height: 350px;
     }
 
     .card:hover {
@@ -51,7 +51,7 @@
       align-self: flex-start;
     }
 
-    .card a svg{
+    .card a svg {
       margin-right: 5px;
     }
 
@@ -64,4 +64,16 @@
     .card a:active {
       transform: translate(4px, 4px);
       box-shadow: 0 0 0 #171717;
+    }
+
+    .project-card {
+      contain: layout style paint;
+      /* Optimize repaints */
+      will-change: transform;
+      /* GPU layer */
+    }
+
+    .skills-badges {
+      contain: layout;
+      /* Isolate layout calculations */
     }

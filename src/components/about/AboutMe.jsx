@@ -1,6 +1,7 @@
 import React from 'react'
 import './AboutMe.css'
-import ProfileImage from '../../assets/PROFILE_IMG.png'
+import ProfileImageWebP from '../../assets/IMG_1282.webp'
+import ProfileImageJPG from '../../assets/IMG_1282.jpg'
 import { motion } from 'framer-motion'
 
 export default function AboutMe() {
@@ -11,11 +12,18 @@ export default function AboutMe() {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }} 
-        viewport={{ once:true ,amount: 0.5 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
         className='profile-container'>
         <div className='profile-image'>
-          <img src={ProfileImage} alt="" />
+          <picture>
+            <source srcSet={ProfileImageWebP} media="(min-width: 768px)" type='image/webp' />
+            <img src={ProfileImageJPG} 
+              alt="Mahesh Gudooru - Software Developer"
+              loading="lazy"
+              width="300"
+              height="300" />
+          </picture>
         </div>
         <div className='profile-desc'>
           <h1>Gudooru Mahesh</h1>
