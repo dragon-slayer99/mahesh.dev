@@ -1,7 +1,7 @@
 import React from 'react';
 import './Loading.css';
 
-const Loading = ({ message }) => {
+const Loading = () => {
   return (
     <div className="loading-container">
       <div className="cube-loader">
@@ -14,7 +14,7 @@ const Loading = ({ message }) => {
         </div>
       </div>
 
-      {message && <p className="loading-message">{message}</p>}
+
 
     </div>
 

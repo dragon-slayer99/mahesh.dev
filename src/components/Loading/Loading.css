@@ -4,6 +4,7 @@
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    cursor: wait;
 }
 
 .cube-loader {
@@ -16,11 +17,6 @@
     animation: animate 4s linear infinite;
 }
 
-.loading-message {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #333;
-}
 
 @keyframes animate {
     0% {

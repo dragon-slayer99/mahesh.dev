@@ -25,6 +25,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { Rocket, Mail, User } from 'lucide-react';
 
+
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
@@ -65,7 +66,7 @@ export default function Navbar() {
             <nav className="navbar">
                 <div className="nav-container">
                     <a href="#" className="nav-logo">
-                        I'm Mahesh
+                        {"<GM/>"}
                     </a>
 
                     <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>

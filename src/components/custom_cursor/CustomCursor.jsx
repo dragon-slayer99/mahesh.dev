@@ -32,15 +32,6 @@ export default function CustomCursor() {
     return (
         <>
             {!isMobile && (
-                //   <img
-                //     src="/cursor-normal.svg"
-                //     alt="cursor"
-                //     className="custom-cursor"
-                //     style={{
-                //       left: position.x,
-                //       top: position.y,
-                //     }}
-                //   />
 
                 <svg className="custom-cursor"
                     xmlns="http://www.w3.org/2000/svg"

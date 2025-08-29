@@ -13,30 +13,32 @@ const Footer = lazy(() => import('./components/footer/Footer'));
 
 // Remove this - we're using the custom Loading component
 
+
+
 function App() {
   return (
     <>
-      <Suspense fallback={<Loading message="Loading..." />}>
+      <Suspense fallback={null}>
         <CustomCursor />
       </Suspense>
       <Navbar />
       <Content />
 
-      <Suspense fallback={<Loading message="Loading..." />}>
+      <Suspense fallback={<Loading />}>
         <CardSection />
       </Suspense>
 
       <AboutSection />
 
-      <Suspense fallback={<Loading message="Loading..." />}>
+      <Suspense fallback={<Loading />}>
         <FunFacts />
       </Suspense>
 
-      <Suspense fallback={<Loading message="Loading..." />}>
+      <Suspense fallback={<Loading />}>
         <Contact />
       </Suspense>
 
-      <Suspense fallback={<Loading message="Loading..." />}>
+      <Suspense fallback={<Loading />}>
         <Footer />
       </Suspense>
     </>
