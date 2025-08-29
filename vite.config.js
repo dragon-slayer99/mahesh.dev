@@ -3,37 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    // Add custom plugin for critical CSS
-    {
-      name: 'critical-css',
-      writeBundle: async () => {
-        if (process.env.NODE_ENV === 'production') {
-          const critical = require('critical');
-
-          try {
-            await critical.generate({
-              base: 'dist/',
-              src: 'index.html',
-              dest: 'index.html',
-              width: 1300,
-              height: 900,
-              inline: true,
-              minify: true,
-              extract: true,
-              penthouse: {
-                blockJSRequests: false,
-              }
-            });
-            console.log('✅ Critical CSS generated!');
-          } catch (err) {
-            console.error('❌ Critical CSS failed:', err);
-          }
-        }
-      }
-    }
-  ],
+  plugins: [react()],
   base: "/mahesh.dev",
   build: {
     rollupOptions: {
