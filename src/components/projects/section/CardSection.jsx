@@ -41,14 +41,20 @@ export default function CardSection() {
     return (
         <>
             <div className='cardContainer' id='projects'>
-                <h1>Projects</h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.6}}
+
+                >Projects</motion.h1>
                 <div className='cardLayout'>
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once:true, amount: 0.2 }}
+                            viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
                         >
                             <Card project={project} />

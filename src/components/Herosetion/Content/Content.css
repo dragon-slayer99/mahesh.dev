@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10vh 0;
 }
 
 .hero-container {
@@ -72,62 +73,8 @@ p {
 
 
 
-.scrollAnimate {
-    animation: scrollAnimate both;
-    animation-timeline: view();
-    animation-range: entry 30% cover 10vh;
-}
 
-.fadeAnimate {
-    /* animation: fadeAnimate both;
-    animation-timeline: view();
-    animation-range: entry 15% cover 60%; */
 
-    animation: fadeInScroll 1s ease-out both;
-    animation-timeline: view();
-    animation-range: entry 15% cover 60%;
-
-}
-
-@keyframes fadeAnimate {
-    /* from {
-        filter: blur(5px) saturate(0) contrast(4) brightness(.1);
-        opacity: 0;
-        scale: .95;
-        translate: 0 4rem;
-    }
-
-    to {
-        filter: none;
-        opacity: 1;
-        scale: 1;
-        translate: 0 0;
-    } */
-
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-        /* subtle upward motion */
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes scrollAnimate {
-
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
 
 @media screen and (max-width: 1200px) {
     .hero-container {
@@ -207,7 +154,7 @@ p {
     .hero-section {
         padding: 2rem 1rem;
         min-height: 60vh;
-        margin-top: 10vh;
+        margin: 10vh 0;
     }
 
     .hero-container {

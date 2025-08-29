@@ -8,6 +8,7 @@ import {
     Building2,
     TrendingUp,
 } from "lucide-react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const educationData = [
@@ -41,8 +42,8 @@ export default function Education() {
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true, amount: 0.8}}
             >
                 Education & Experience
             </motion.h1>
@@ -97,7 +98,7 @@ export default function Education() {
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.8 }}
+                viewport={{ once: true, amount: 0.5 }}
             >
                 <div className="experience-card">
                     {/* Header */}
