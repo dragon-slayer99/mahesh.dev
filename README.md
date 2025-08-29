@@ -1,12 +1,45 @@
-# React + Vite
+# 🌐 Mahesh's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website!  
+This site showcases my skills, projects, and experience as a developer.  
 
-Currently, two official plugins are available:
+🔗 **Live Website:** [mahesh.dev](https://github.com/dragon-slayer99.github.io/mahesh.dev/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
+- 🎨 Clean and modern UI
+- 🖥️ Fully responsive design (mobile + desktop friendly)
+- ⌨️ Typewriter & smooth animations
+- 📂 Projects showcase with live demos & source links
+- 📞 Contact form to get in touch
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React.js, JavaScript, HTML, CSS  
+- **Styling:** Tailwind CSS (if you’re using it)  
+- **Animations:** Framer Motion / Typewriter Effect  
+- **Hosting:** GitHub Pages  
+
+---
+
+## 🚀 Getting Started (For Developers)
+
+If you’d like to run this project locally:
+
+```bash
+# Clone the repo
+git clone https://github.com/dragon-slayer99/mahesh.dev.git
+
+# Navigate into the project
+cd react_portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+   or
+npm run dev:host
+
