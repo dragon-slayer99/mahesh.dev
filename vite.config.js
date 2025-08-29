@@ -34,6 +34,7 @@ export default defineConfig({
       }
     }
   ],
+  base: "/mahesh.dev",
   build: {
     rollupOptions: {
       output: {

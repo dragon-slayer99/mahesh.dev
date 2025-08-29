@@ -1,5 +1,6 @@
 {
   "name": "react_portfolio",
+  "homepage": "https://github.com/dragon-slayer99.github.io/mahesh.dev/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +10,13 @@
     "build": "vite build",
     "build:critical": "vite build && node scripts/critical.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.542.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
