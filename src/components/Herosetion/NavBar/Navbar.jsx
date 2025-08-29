@@ -21,7 +21,7 @@
 
 // export default Navbar
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Rocket, Mail, User } from 'lucide-react';
 
@@ -31,11 +31,7 @@ export default function Navbar() {
     const [activeSection, setActiveSection] = useState('');
 
     const sections = ['projects', 'about', 'contact'];
-    // const sectionRefs = useRef({});
 
-    // sections.forEach((section) => {
-    //     sectionRefs.current[section] = React.createRef();
-    // });
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);

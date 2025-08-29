@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, createElement, useMemo, useCallback } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import './TextType.css';
 
@@ -127,6 +128,7 @@ const TextType = ({
     reverseMode,
     variableSpeed,
     onSentenceComplete,
+    getRandomSpeed
   ]);
 
   const shouldHideCursor =

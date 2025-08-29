@@ -14,7 +14,7 @@ const Content = () => {
                         <div className='type-text-div'>
                             <h1 className='type-text'>
                                 <TextType
-                                    text={["I am Mahesh", "I am a student"]}
+                                    text={["I am Mahesh", "I am a CS Student"]}
                                     typingSpeed={200}
                                     pauseDuration={1500}
                                     deletingSpeed={200}
