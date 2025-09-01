@@ -18,8 +18,9 @@ This site showcases my skills, projects, and experience as a developer.
 
 ## 🛠️ Tech Stack
 - **Frontend:** React.js, JavaScript, HTML, CSS  
-- **Styling:** Tailwind CSS (if you’re using it)  
-- **Animations:** Framer Motion / Typewriter Effect  
+- **Styling:** Vanilla CSS 
+- **Animations:** Framer Motion / Typewriter Effect
+- **Icons:** lucide-react
 - **Hosting:** GitHub Pages  
 
 ---
