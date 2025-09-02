@@ -1,0 +1,1 @@
+.custom-cursor{position:fixed;pointer-events:none;width:32px;height:32px;fill:var(--bg-color);stroke:var(--primary-text);transition:transform .1s ease-out,width .1s ease-out,height .1s ease-out;z-index:9999}
