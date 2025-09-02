@@ -1,40 +1,91 @@
+@font-face {
+    font-family: "Roboto mono";
+    src: url("/fonts/RobotoMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+:root {
+    --background-image: radial-gradient(
+        circle at 1px 1px,
+        rgba(0, 0, 0, 0.35) 1px,
+        transparent 0
+    );
+    --bg-color: white;
+    --border-color: black;
+    --primary-text: black;
+    --secondary-text: grey;
+    --icon-bg: white;
+    --icon-fill: darkslategrey;
+    --card-shadow: #d4d4d4;
+    --card-button: #facc15;
+    --badge-bg: #f5f5f5;
+    --edu-card-highlight: #fffaf0;
+    --status-color-completed: #e6f7ed; 
+    --status-color-completed-text: #059669; 
+    --status-color-ongoing: #fff7e6; 
+    --status-color-ongoing-text: #d97706; 
+    --exp-desc: #444;
+}
 
-    @font-face {
-      font-family: "Roboto mono";
-      src: url("/fonts/RobotoMono-Regular.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+.dark-mode {
+    --background-image: radial-gradient(
+        circle at 1px 1px,
+        rgba(73, 73, 73, 0.656) 1px,
+        transparent 0
+    );
+    --bg-color: #000000;
+    --border-color: white;
+    --primary-text: white;
+    --secondary-color: #aaaaaa;
+    --icon-bg: black;
+    --icon-fill: darkslategrey;
+    --card-shadow: transparent;
+    --card-button: #3415fa;
+    --badge-bg: #2f2f2f;
+    --edu-card-highlight: #161616; 
+    --status-color-completed: #17fd4d; 
+    --status-color-completed-text: black; 
+    --status-color-ongoing: #fcba2c; 
+    --status-color-ongoing-text: #1e1b18; 
+    --exp-desc: #7d7c7c;
 
+}
 
-    body {
-      font-family: "Roboto mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background: #ffffff;
-      background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0);
-      background-size: 20px 20px;
-      background-attachment: fixed;
-      /* 🔑 keeps it static */
-      margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    } 
+body {
+    font-family: "Roboto mono", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--bg-color);
+    background-image: var(--background-image);
+    background-size: 20px 20px;
+    background-attachment: fixed;
+    /* 🔑 keeps it static */
+    margin: 0px;
+    transition: background 0.3s ease, background-image 0.3s ease;
+}
 
+body,
+a,
+button,
+img,
+input,
+textarea,
+label,
+span {
+    cursor: none !important;
+}
 
-    body,
-    a,
-    button,
-    img,
-    input,
-    textarea {
-      cursor: none !important;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-
+html {
+    scroll-behavior: smooth;
+}

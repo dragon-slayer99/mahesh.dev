@@ -1,13 +1,18 @@
 .text-type {
     display: inline-block;
     white-space: pre-wrap;
-    color: black;
 }
 
 .text-type__cursor {
     margin-left: 0.15rem;
     display: inline-block;
     opacity: 1;
+    color: var(--primary-text);
+
+}
+
+.text-type__content{
+    color: var(--primary-text);
 }
 
 .text-type__cursor--hidden {

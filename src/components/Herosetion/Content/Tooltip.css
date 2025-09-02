@@ -50,8 +50,8 @@ ul {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #fff;
+    color: var(--icon-fill);
+    background-color: var(--icon-bg);
     transition: all 0.3s ease-in-out;
     padding: 0px;
 }
