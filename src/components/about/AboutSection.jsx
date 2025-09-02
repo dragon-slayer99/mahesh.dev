@@ -2,6 +2,7 @@ import React from 'react'
 import AboutMe from './AboutMe'
 import Skills from './Skills'
 import Education from './Eduaction'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 import { containerVariants, leftVariant, rightVariant } from './variants'
 export default function AboutSection() {

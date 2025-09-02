@@ -3,6 +3,7 @@
   letter-spacing: 3px;
   margin: 20px 0px 20px 0px;
   max-width: 90vw;
+  color: var(--primary-text);
 
 
 }
@@ -22,9 +23,9 @@
   gap: 2rem;
   max-width: 900px;
   padding: 2.5rem;
-  background: #ffffff;
-  border: 2px solid black;
-  box-shadow: 8px 8px 0 #d4d4d4;
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  box-shadow: 8px 8px 0 var(--card-shadow);
   /* border-radius: 1rem; */
   /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); */
   text-align: center;
@@ -66,7 +67,7 @@
 .profile-desc p {
   font-size: 1rem;
   /* smaller text */
-  color: #4b5563;
+  color: var(--secondary-text);
   line-height: 1.6;
   max-width: 550px;
   /* balanced line length */

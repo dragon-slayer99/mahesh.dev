@@ -1,9 +1,11 @@
 .custom-cursor {
-  position: fixed;
-  pointer-events: none; /* allows clicking through the cursor */
-  width: 32px; /* adjust as needed */
-  height: 32px;
-  transition: transform 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out;
-  z-index: 9999;
+    position: fixed;
+    pointer-events: none; /* allows clicking through the cursor */
+    width: 32px; /* adjust as needed */
+    height: 32px;
+    fill: var(--bg-color);
+    stroke: var(--primary-text);
+    transition: transform 0.1s ease-out, width 0.1s ease-out,
+        height 0.1s ease-out;
+    z-index: 9999;
 }
-

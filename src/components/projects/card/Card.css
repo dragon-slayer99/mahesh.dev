@@ -1,13 +1,13 @@
     .card {
-      border: 2px solid #171717;
-      background-color: #fafafa;
+      border: 2px solid var(--border-color);
+      background-color: var(--bg-color);
       padding: 2rem;
-      box-shadow: 8px 8px 0 #d4d4d4;
+      box-shadow: 8px 8px 0 var(--card-shadow);
       max-width: 400px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background: #fafafa;
+      background: var(--bg-color);
       transition: all 0.3s ease;
       min-height: 350px;
     }
@@ -19,7 +19,7 @@
 
     .card h3 {
       font-size: 1.5rem;
-
+      color: var(--primary-text);
       font-weight: 700;
 
       margin-bottom: 1rem;
@@ -27,7 +27,7 @@
     }
 
     .card p {
-      color: #525252;
+      color: var(--secondary-text);
       margin-bottom: 1.5rem;
       line-height: 1.5;
       flex-grow: 1;
@@ -37,13 +37,13 @@
     .card a {
       display: inline-flex;
       align-items: center;
-      border: 2px solid #171717;
-      background-color: #facc15;
+      border: 2px solid var(--border-color);
+      background-color: var(--card-button);
       padding: 0.75rem 1.5rem;
       font-weight: 700;
       text-decoration: none;
-      color: black;
-      box-shadow: 4px 4px 0 #a3a3a3;
+      color: var(--primary-text);
+      box-shadow: 4px 4px 0 var(--card-shadow);
       transition: all 0.2s ease;
       position: relative;
       bottom: 0px;
@@ -56,7 +56,8 @@
     }
 
     .card a:hover {
-      background-color: #fbbf24;
+      background-color: var(--card-button);
+      filter: brightness(150%);
       transform: translate(2px, 2px);
       box-shadow: 2px 2px 0 #171717;
     }

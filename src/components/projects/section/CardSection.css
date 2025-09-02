@@ -9,10 +9,11 @@
 }
 
 .cardContainer h1 {
-    font-size: 3em;
+    font-size: 3rem;
     letter-spacing: 2px;
     margin: 20px 0px 20px 0px;
     max-width: 90vw;
+    color: var(--primary-text);
 }
 
 .cardLayout {
@@ -30,13 +31,7 @@
     padding: 2rem;
 }
 
-.cardLayout Card {
-    background: #fafafa;
-    border: 2px solid #171717;
-    padding: 2rem;
-    box-shadow: 8px 8px 0 #d4d4d4;
-    
-}
+
 
 @media screen and (max-width: 640px) {
     .cardLayout {
@@ -106,7 +101,7 @@
     }
 
     .cardContainer h1 {
-        font-size: 2em;
+        font-size: 3em;
 
     }
 }

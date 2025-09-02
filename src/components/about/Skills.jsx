@@ -1,5 +1,6 @@
 import React from 'react'
 import './Skills.css'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 
 import Badge from './Badge'
@@ -76,7 +77,7 @@ export default function Skills() {
 
                         <Badge icon={reactIcon} label={"React"} />
 
-                        <Badge icon={tailwindIcon} label={"C"} />
+                        <Badge icon={tailwindIcon} label={"Tailwind"} />
 
                         <Badge icon={DjangoIcon} label={"Django"} />
                     </div>

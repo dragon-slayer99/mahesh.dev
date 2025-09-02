@@ -17,7 +17,7 @@ const TextType = ({
   cursorCharacter = "|",
   cursorClassName = "",
   cursorBlinkDuration = 0.5,
-  textColors = [],
+  // textColors = [],
   variableSpeed,
   onSentenceComplete,
   startOnVisible = false,
@@ -39,10 +39,10 @@ const TextType = ({
     return Math.random() * (max - min) + min;
   }, [variableSpeed, typingSpeed]);
 
-  const getCurrentTextColor = () => {
-    if (textColors.length === 0) return "#000000ff";
-    return textColors[currentTextIndex % textColors.length];
-  };
+  // const getCurrentTextColor = () => {
+  //   if (textColors.length === 0) return "#000000ff";
+  //   return textColors[currentTextIndex % textColors.length];
+  // };
 
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
@@ -144,7 +144,7 @@ const TextType = ({
     },
     <span
       className="text-type__content"
-      style={{ color: getCurrentTextColor() }}
+      // style={{ color: getCurrentTextColor() }}
     >
       {displayedText}
     </span>,

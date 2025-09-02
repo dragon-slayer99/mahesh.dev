@@ -68,12 +68,8 @@ p {
 .type-text {
     font-size: 3em;
     margin: 20px 0px 10px 0px;
-    text-align: center;
+    text-align: center; 
 }
-
-
-
-
 
 
 @media screen and (max-width: 1200px) {

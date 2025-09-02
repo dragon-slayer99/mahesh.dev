@@ -1,9 +1,9 @@
 .footer {
-    background: white;
-    color: black;
+    background: var(--bg-color);
+    color: var(--primary-color);
     text-align: center;
     padding: 2rem 1rem;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--border-color);
     scroll-margin-top: 100px;
     /* grey border line */
 }
@@ -15,11 +15,12 @@
     gap: 1.5rem;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
+    
 }
 
 .footer-links a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-text);
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -35,6 +36,7 @@
     justify-content: center;
     gap: 1.2rem;
     margin-bottom: 1.5rem;
+    
 }
 
 .footer-socials a {
@@ -45,8 +47,9 @@
     height: 45px;
     border-radius: 50%;
     border: 1px solid #ccc;
-    color: black;
+    color: var(--primary-text);
     transition: all 0.3s ease;
+    background-color: var(--icon-bg);
 }
 
 .footer-socials a:hover {
