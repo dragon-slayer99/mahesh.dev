@@ -24,11 +24,11 @@
 @media (min-width: 768px) {
     .funfacts-grid {
         grid-template-columns: 1fr 1fr;
-        align-items: stretch; /* ensures equal height */
+        align-items: stretch; 
     }
 }
 
-/* Wrapper only for framer entrance */
+
 .funfact-card-wrapper {
     display: flex;
     justify-content: center;

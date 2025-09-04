@@ -46,25 +46,22 @@
 
 
 
-/* 📱 Mobile view */
+/* mobile view */
 @media (max-width: 640px) {
     .skills-badges {
         justify-content: center;
-        /* center badges */
         gap: 1rem;
-        /* extra breathing space */
     }
 
     .badge {
         flex: 1 1 45%;
-        /* 2 per row */
         justify-content: center;
         padding: 0.7rem 0.9rem;
         font-size: 0.85rem;
     }
 }
 
-/* 💻 Larger screens */
+/* larger screens */
 @media (min-width: 1024px) {
     .skills-container {
         margin: 3rem auto;

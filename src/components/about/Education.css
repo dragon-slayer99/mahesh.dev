@@ -16,7 +16,6 @@
     color: var(--primary-text);
 }
 
-/* Card style */
 .education-card {
     border: 2px solid var(--border-color);
     color: var(--primary-text);
@@ -29,13 +28,12 @@
 
 }
 
-/* Header */
+
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* allow wrapping if needed */
 }
 
 .title {
@@ -43,16 +41,14 @@
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
-    /* allow wrapping inside title */
 }
 
-/* Dynamic heading */
+
 .title h2 {
     font-size: clamp(0.9rem, 2vw, 1.4rem);
     font-weight: 600;
     line-height: 1.4;
     overflow-wrap: break-word;
-    /* wrap long words */
 }
 
 /* Badge */
@@ -73,7 +69,7 @@
     color: var(--status-color-ongoing-text);
 }
 
-/* Row style */
+
 .card-row {
     display: flex;
     align-items: center;
@@ -81,8 +77,7 @@
     margin-top: 10px;
     color: #555;
     font-size: clamp(0.85rem, 1.8vw, 1rem);
-    /* flex-wrap: wrap; */
-    /* allow row to break if needed */
+
 }
 
 .card-row p {
@@ -90,7 +85,7 @@
     text-align: start;
 }
 
-/* Icons */
+
 .card-row svg,
 .title svg {
     flex-shrink: 0;
@@ -98,7 +93,7 @@
     height: clamp(18px, 2.5vw, 24px);
 }
 
-/* Performance row */
+
 .performance {
     background: var(--edu-card-highlight);
     padding: 10px;

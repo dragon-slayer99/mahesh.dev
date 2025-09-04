@@ -2,7 +2,7 @@
   text-align: center;
   padding: 3rem 1rem;
   padding-top: 0;
-  color: black;      /* Black text */
+  color: black;      
   scroll-margin-top: 100px;
 }
 
@@ -14,7 +14,7 @@
   letter-spacing: 2px;
 }
 
-/* Social Links */
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -36,39 +36,39 @@
   transition: all 0.3s ease;
 }
 
-/* Default hover effect */
+
 .contact-icon:hover {
   transform: scale(1.1);
   border-color: black;
 }
 
-/* Brand Colors on Hover */
+
 .linkedin:hover {
-  color: #0a66c2; /* LinkedIn Blue */
+  color: #0a66c2; 
   border-color: #0a66c2;
 }
 
 .gmail:hover {
-  color: #d93025; /* Gmail Red */
+  color: #d93025;
   border-color: #d93025;
 }
 
 .instagram:hover {
-  color: #e1306c; /* Instagram Pink */
+  color: #e1306c; 
   border-color: #e1306c;
 }
 
 .twitter:hover {
-  color: #1da1f2; /* Twitter Blue */
+  color: #1da1f2; 
   border-color: #1da1f2;
 }
 
 .glassdoor:hover {
-  color: #0caa41; /* Glassdoor Green */
+  color: #0caa41; 
   border-color: #0caa41;
 }
 
-/* Contact Form */
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -80,7 +80,7 @@
 .contact-form input,
 .contact-form textarea {
   padding: 0.8rem 1rem;
-  border: 1px solid #ccc; /* grey border */
+  border: 1px solid #ccc;
   border-radius: 8px;
   background: var(--bg-color);
   color: var(--primary-text);

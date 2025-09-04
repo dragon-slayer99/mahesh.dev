@@ -18,7 +18,7 @@ const LeetCodeIcon = () => (
 export default function Footer() {
     return (
         <footer className="footer">
-            {/* Quick Links */}
+
             <nav className="footer-links">
                 <a href="#">Home</a>
                 <a href="#projects">Projects</a>
@@ -26,7 +26,7 @@ export default function Footer() {
                 <a href="#contact">Contact</a>
             </nav>
 
-            {/* Social Icons */}
+
             <div className="footer-socials">
                 <a href="mailto:maheshgudooru@gmail.com" aria-label="Gmail">
                     <Mail size={24} />
@@ -44,7 +44,7 @@ export default function Footer() {
                 </a>
             </div>
 
-            {/* Copyright */}
+
             <p className="footer-copy">© {new Date().getFullYear()} Gudooru Mahesh. All rights reserved.</p>
         </footer>
     );
