@@ -9,7 +9,6 @@
 
 .cube-loader {
     position: relative;
-    /* u can choose any size */
     width: 75px;
     height: 75px;
     transform-style: preserve-3d;
@@ -43,7 +42,6 @@
     height: 100%;
     /* top: 0;
     left: 0; */
-    /* width 75px / 2 = 37.5px */
     transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
     background: linear-gradient(to bottom,
             hsl(330, 3.13%, 25.1%) 0%,
@@ -69,7 +67,7 @@
     width: 75px;
     height: 75px;
     background: hsl(330, 3.13%, 25.1%) 0%;
-    /* width 75px / 2 = 37.5px */
+   
     transform: rotateX(90deg) translateZ(37.5px);
     transform-style: preserve-3d;
 }
@@ -77,7 +75,7 @@
 .cube-top::before {
     content: '';
     position: absolute;
-    /* u can choose any size */
+
     width: 75px;
     height: 75px;
     background: hsl(176.61, 42.28%, 40.7%) 19.6%;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./CustomCursor.css";
 
 export default function CustomCursor() {
@@ -7,12 +7,9 @@ export default function CustomCursor() {
 
     useEffect(() => {
         const moveCursor = (e) => {
-            // Cancel previous animation frame
             if (rafId.current) {
                 cancelAnimationFrame(rafId.current);
             }
-
-            // Use requestAnimationFrame for smooth 60fps updates
             rafId.current = requestAnimationFrame(() => {
                 setPosition({ x: e.clientX, y: e.clientY });
             });

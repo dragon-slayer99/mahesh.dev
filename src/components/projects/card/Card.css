@@ -69,12 +69,12 @@
 
     .project-card {
       contain: layout style paint;
-      /* Optimize repaints */
+      
       will-change: transform;
-      /* GPU layer */
+      
     }
 
     .skills-badges {
       contain: layout;
-      /* Isolate layout calculations */
+      
     }

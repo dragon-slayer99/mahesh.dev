@@ -5,10 +5,8 @@
     padding: 2rem 1rem;
     border-top: 1px solid var(--border-color);
     scroll-margin-top: 100px;
-    /* grey border line */
 }
 
-/* Quick Links */
 .footer-links {
     display: flex;
     justify-content: center;
@@ -26,11 +24,10 @@
 }
 
 .footer-links a:hover {
-    color: #666;
-    /* subtle hover */
+    color: #666;    
 }
 
-/* Social Icons */
+
 .footer-socials {
     display: flex;
     justify-content: center;
@@ -56,7 +53,7 @@
     transform: scale(1.1);
 }
 
-/* Brand Colors on Hover */
+
 .footer-socials a[aria-label="Gmail"]:hover {
     border-color: #d93025;
     color: #d93025;
@@ -68,8 +65,8 @@
 }
 
 .footer-socials a[aria-label="GitHub"]:hover {
-    border-color: #000;
-    color: #000;
+    border-color: #3d3d3d;
+    color: #646464;
 }
 
 .footer-socials a[aria-label="LeetCode"]:hover {
@@ -82,14 +79,14 @@
     color: #e1306c;
 }
 
-/* Copyright */
+
 .footer-copy {
     font-size: 0.9rem;
     color: #666;
     margin-top: 1rem;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
     .footer-links {
         flex-direction: column;
