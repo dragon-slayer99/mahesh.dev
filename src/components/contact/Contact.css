@@ -91,7 +91,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: black;
+  border-color: rgb(254, 0, 0);
 }
 
 .contact-form input::placeholder,
