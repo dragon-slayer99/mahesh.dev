@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website!  
 This site showcases my skills, projects, and experience as a developer.  
 
-🔗 **Live Website:** [mahesh.dev](https://dragon-slayer99.github.io/mahesh.dev/)
+🔗 **Live Website:** <a href="https://dragon-slayer99.github.io/mahesh.dev/" target="_blank">Live site</a>
 
 ---
 
