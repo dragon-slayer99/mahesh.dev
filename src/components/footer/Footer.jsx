@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Linkedin, Github, Instagram } from "lucide-react";
+import { Mail, Linkedin, Github, Instagram, GraduationCap } from "lucide-react";
 import "./Footer.css";
 
 // Custom LeetCode Icon (since not in lucide-react)
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
 
 
-            <p className="footer-copy">© {new Date().getFullYear()} Gudooru Mahesh. All rights reserved.</p>
+            <p className="footer-copy">Made with ❤️ by Gudooru Mahesh. Licensed under the MIT License.</p>
         </footer>
     );
 }
