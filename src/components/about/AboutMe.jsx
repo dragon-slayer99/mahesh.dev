@@ -2,6 +2,7 @@ import React from 'react'
 import './AboutMe.css'
 import ProfileImageWebP from '../../assets/IMG_1282.webp'
 import ProfileImageJPG from '../../assets/IMG_1282.jpg'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 
 export default function AboutMe() {
