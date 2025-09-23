@@ -1,17 +1,18 @@
 
 
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';
-import { Rocket, Mail, User } from 'lucide-react';
+import { Rocket, Mail, User, Download } from 'lucide-react';
 
+import './Navbar.css';
 import Switch from './Switch/Switch';
+import RESUME from '../../../assets/MAHESH_GUDOORU.pdf';
 
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
 
-    const sections = ['projects', 'about', 'contact'];
+    const sections = ['projects', 'about', 'contact', 'resume'];
 
 
     const toggleMenu = () => {
@@ -76,6 +77,17 @@ export default function Navbar() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <Mail /> Contact
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a
+                                href={RESUME}
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                className={`nav-link ${activeSection === 'resume' ? 'active' : ''}`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                <Download/> Resume
                             </a>
                         </li>
                     </ul>
