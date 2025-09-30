@@ -22,11 +22,12 @@
     --card-button: #facc15;
     --badge-bg: #f5f5f5;
     --edu-card-highlight: #fffaf0;
-    --status-color-completed: #e6f7ed; 
-    --status-color-completed-text: #059669; 
-    --status-color-ongoing: #fff7e6; 
-    --status-color-ongoing-text: #d97706; 
+    --status-color-completed: #e6f7ed;
+    --status-color-completed-text: #059669;
+    --status-color-ongoing: #fff7e6;
+    --status-color-ongoing-text: #d97706;
     --exp-desc: #444;
+    --dock-shadow: rgba(0, 0, 0, 0.4);
 }
 
 .dark-mode {
@@ -44,13 +45,13 @@
     --card-shadow: transparent;
     --card-button: #3415fa;
     --badge-bg: #2f2f2f;
-    --edu-card-highlight: #161616; 
-    --status-color-completed: #17fd4d; 
-    --status-color-completed-text: black; 
-    --status-color-ongoing: #fcba2c; 
-    --status-color-ongoing-text: #1e1b18; 
+    --edu-card-highlight: #161616;
+    --status-color-completed: #17fd4d;
+    --status-color-completed-text: black;
+    --status-color-ongoing: #fcba2c;
+    --status-color-ongoing-text: #1e1b18;
     --exp-desc: #7d7c7c;
-
+    --dock-shadow: rgba(255, 255, 255, 0.4);
 }
 
 * {
@@ -75,6 +76,23 @@ body {
     transition: background 0.3s ease, background-image 0.3s ease;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 body,
 a,
 button,
@@ -82,7 +100,8 @@ img,
 input,
 textarea,
 label,
-span {
+span,
+div {
     cursor: none !important;
 }
 

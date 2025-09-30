@@ -1,48 +1,54 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./CustomCursor.css";
 
 export default function CustomCursor() {
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const rafId = useRef(null);
-
-    useEffect(() => {
-        const moveCursor = (e) => {
-            if (rafId.current) {
-                cancelAnimationFrame(rafId.current);
-            }
-            rafId.current = requestAnimationFrame(() => {
-                setPosition({ x: e.clientX, y: e.clientY });
-            });
-        };
-
-        document.addEventListener("mousemove", moveCursor);
-        return () => {
-            document.removeEventListener("mousemove", moveCursor);
-            if (rafId.current) {
-                cancelAnimationFrame(rafId.current);
-            }
-        };
-    }, []);
-
+    const elRef = useRef(null);
+    const rafId = useRef(0);
+    const last = useRef({ x: -100, y: -100 });
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-    return (
-        <>
-            {!isMobile && (
+    useEffect(() => {
+        if (isMobile || !elRef.current) return;
 
-                <svg className="custom-cursor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="48"
-                    height="48"
-                    style={{
-                        left: position.x,
-                        top: position.y,
-                        willChange: 'transform' // GPU acceleration
-                    }}
-                    viewBox="0 0 24 24">
-                    <path strokeWidth="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path>
-                </svg>
-            )}
-        </>
+        let scheduled = false;
+
+        const apply = () => {
+            scheduled = false;
+            const el = elRef.current;
+            if (!el) return;
+            const { x, y } = last.current;
+            el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        };
+
+        const onMove = (e) => {
+            last.current.x = e.clientX;
+            last.current.y = e.clientY;
+            if (!scheduled) {
+                scheduled = true;
+                rafId.current = requestAnimationFrame(apply);
+            }
+        };
+
+        window.addEventListener("pointermove", onMove, { passive: true });
+        return () => {
+            window.removeEventListener("pointermove", onMove);
+            if (rafId.current) cancelAnimationFrame(rafId.current);
+        };
+    }, [isMobile]);
+
+    if (isMobile) return null;
+
+    return (
+        <svg
+            ref={elRef}
+            className="custom-cursor"
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+            <path strokeWidth="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path>
+        </svg>
     );
 }
