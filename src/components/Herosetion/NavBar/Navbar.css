@@ -28,6 +28,7 @@
 .nav-menu {
       display: flex;
       list-style: none;
+      justify-self: flex-end;
       margin: 0;
       padding: 0;
 }
@@ -46,7 +47,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      padding-bottom: 5px;
+      /* padding-bottom: 5px; */
 }
 
 .nav-link svg {

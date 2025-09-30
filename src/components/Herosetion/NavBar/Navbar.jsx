@@ -15,9 +15,9 @@ export default function Navbar() {
     const sections = ['projects', 'about', 'contact', 'resume'];
 
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+    // const toggleMenu = () => {
+    //     setIsMenuOpen(!isMenuOpen);
+    // };
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -47,11 +47,11 @@ export default function Navbar() {
                     <a href="#" className="nav-logo">
                         {"<GM/>"}
                     </a>
+                    <div style={{display: "flex", gap: "2rem"}}>
+
 
                     <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-                        <li className="nav-item">
-                            <Switch/>
-                        </li>
+
                         <li className="nav-item">
                             <a
                                 href="#projects"
@@ -91,15 +91,16 @@ export default function Navbar() {
                             </a>
                         </li>
                     </ul>
-
-                    <button
+                            <Switch/>
+                                                </div>
+                    {/* <button
                         className={`hamburger ${isMenuOpen ? 'active' : ''}`}
                         onClick={toggleMenu}
                     >
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button>
+                    </button> */}
                 </div>
             </nav>
         </>

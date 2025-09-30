@@ -4,6 +4,8 @@ import Content from './components/Herosetion/Content/Content'
 import AboutSection from './components/about/AboutSection'
 import Loading from './components/Loading/Loading'
 
+import DockMenu from './components/Herosetion/NavBar/Docks/DockMenu';
+
 const CustomCursor = lazy(() => import('./components/custom_cursor/CustomCursor'));
 const CardSection = lazy(() => import('./components/projects/section/CardSection'));
 const FunFacts = lazy(() => import('./components/funfact/FunFacts'));
@@ -16,8 +18,10 @@ function App() {
       <Suspense fallback={null}>
         <CustomCursor />
       </Suspense>
+
       <Navbar />
       <Content />
+
 
       <Suspense fallback={<Loading />}>
         <CardSection />
@@ -36,6 +40,9 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Footer />
       </Suspense>
+
+      <DockMenu />
+
     </>
   )
 }
