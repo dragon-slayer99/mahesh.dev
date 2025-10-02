@@ -3,7 +3,7 @@
 
 <head>
   <!-- paste this BEFORE any scripts -->
-  <script crossOrigin="anonymous" src="//unpkg.com/react-scan/dist/auto.global.js"></script>
+  <!-- <script crossOrigin="anonymous" src="//unpkg.com/react-scan/dist/auto.global.js"></script> -->
 
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -12,6 +12,16 @@
 
   <!-- Preload critical font -->
   <link rel="preload" href="/fonts/RobotoMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF8SL8SGNC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BF8SL8SGNC');
+  </script>
 
 </head>
 
