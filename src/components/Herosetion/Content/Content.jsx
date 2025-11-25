@@ -1,7 +1,7 @@
 import React from 'react';
 import TextType from './TextType'
 import './Content.css'
-import ProfileImg from '../../../assets/Coding 5.svg'
+// import ProfileImg from '../../../assets/Coding 5.svg'
 import Tooltip from './Tooltip';
 const Content = () => {
     return (
