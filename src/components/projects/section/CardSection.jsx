@@ -7,24 +7,19 @@ import { motion } from "framer-motion"
 export default function CardSection() {
     const projects = [
         {
+            title: "AlgoSphere",
+            desc: "A website that consists curated collection of algorithm snippets in all major languages(Java, Python, C++, JavaScript). Algorithm to data structure implementation everything at one place.",
+            link: "https://algosphere101.netlify.app/",
+        },
+        {
             title: "Chess Game",
             desc: "Made using Java; I am really proud of this project, it took me about a month to complete this project. It include all advanced rules of chess along with the basic ones.",
             link: "https://github.com/dragon-slayer99/Chessgame",
         },
         {
-            title: "Mini Projects",
-            desc: "This is a set of mini projects I have created while I was learning about the basic of the HTML, CSS and JavaScript",
-            link: "https://github.com/dragon-slayer99/Mini-Projects"
-        },
-        {
-            title: "Time-based Projects",
-            desc: "A collection of projects (Small projects) I made along the way while I was learning about how browsers handle time.",
-            link: "https://github.com/dragon-slayer99/Time-Based-Projects"
-        },
-        {
-            title: "Fun Projects",
-            desc: "A collections of projects I made while learning about APIs for the first; I was really excited to learn about all the possible things I can do with this amazing tools.",
-            link: "https://github.com/dragon-slayer99/Fun-Projects"
+            title: "AlgoSphere",
+            desc: "A website that consists of the largest curated list of code snippets for all algorithms you will ever need in your DSA journey in all major languages(Java, JavaScript, Python, CPP)",
+            link: "https://github.com/dragon-slayer99/Algo_Sphere"
         },
         {
             title: "Anime Website",
@@ -35,6 +30,16 @@ export default function CardSection() {
             title: "Calculator",
             desc: "The legendary calculator projects I have never met any one who hasn't built this as their first project so did I but not as the first project.",
             link: "https://github.com/dragon-slayer99/Calculator"
+        },
+        {
+            title: "Mini Projects",
+            desc: "This is a set of mini projects I have created while I was learning about the basic of the HTML, CSS and JavaScript",
+            link: "https://github.com/dragon-slayer99/Mini-Projects"
+        },
+        {
+            title: "Time-based Projects",
+            desc: "A collection of projects (Small projects) I made along the way while I was learning about how browsers handle time.",
+            link: "https://github.com/dragon-slayer99/Time-Based-Projects"
         },
 
     ];
