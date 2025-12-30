@@ -7,6 +7,11 @@ import { motion } from "framer-motion"
 export default function CardSection() {
     const projects = [
         {
+            title: "AlgoSphere",
+            desc: "A website that consists curated collection of algorithm snippets in all major languages(Java, Python, C++, JavaScript). Algorithm to data structure implementation everything at one place.",
+            link: "https://algosphere101.netlify.app/",
+        },
+        {
             title: "Chess Game",
             desc: "Made using Java; I am really proud of this project, it took me about a month to complete this project. It include all advanced rules of chess along with the basic ones.",
             link: "https://github.com/dragon-slayer99/Chessgame",
