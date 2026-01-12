@@ -17,11 +17,6 @@ export default function CardSection() {
             link: "https://github.com/dragon-slayer99/Chessgame",
         },
         {
-            title: "AlgoSphere",
-            desc: "A website that consists of the largest curated list of code snippets for all algorithms you will ever need in your DSA journey in all major languages(Java, JavaScript, Python, CPP)",
-            link: "https://github.com/dragon-slayer99/Algo_Sphere"
-        },
-        {
             title: "Anime Website",
             desc: "A Django based application that use 'Jiken API' to fetch anime data. Also implements user authentication using Django's inbuild authentication system.",
             link: "https://github.com/dragon-slayer99/Django_anime_project"
