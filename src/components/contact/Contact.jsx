@@ -31,7 +31,7 @@ export default function Contact() {
         <a href="https://www.linkedin.com/in/gudooru-mahesh-6b49b3254/" target="_blank" rel="noopener noreferrer" className="contact-icon linkedin">
           <Linkedin size={28} />
         </a>
-        <a href="mailto:maheshgudooru@gmail.com" className="contact-icon gmail">
+        <a href="mailto:maheshgudooru@gmail.com" target="_blank" className="contact-icon gmail">
           <Mail size={28} />
         </a>
         <a href="https://github.com/dragon-slayer99" target="_blank" rel="noopener noreferrer" className="contact-icon github">

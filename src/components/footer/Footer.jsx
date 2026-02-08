@@ -28,7 +28,7 @@ export default function Footer() {
 
 
             <div className="footer-socials">
-                <a href="mailto:maheshgudooru@gmail.com" aria-label="Gmail">
+                <a href="mailto:maheshgudooru@gmail.com" target="_blank" aria-label="Gmail">
                     <Mail size={24} />
                 </a>
                 <a href="https://www.linkedin.com/in/gudooru-mahesh-6b49b3254/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
